@@ -1,4 +1,4 @@
-### Web Application for a school driving management ( Dashboard )
+### Web Application for a school management system ( Dashboard of Admin,Teacher,Student and Parents )
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
