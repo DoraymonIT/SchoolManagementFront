@@ -1,71 +1,101 @@
-<div class="container-fluid images" style="padding-top: 100px">
+<div class="container-fluid images" style="padding-top: 60px">
   <div class="row">
-  <div class="col-md-4 cap">
-
-  </div>
-  <div class="col-md-4">
-    <span style="text-align:center">
-         <h1>School Management System</h1>
-    <h3>H. A. H. 2.0</h3>
-    </span>
-
-    <mat-card style=" box-shadow: 0px 13px 90px -7px  #042954;background-color:  #042954;color: #ff9d01">
-      <div class="container">
-        <div class="row">
-
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12" style="text-align: center;">
-               <img
-                 src="../assets/images/driving-school/svg/009-driving school.svg"
-                 alt="Login Image"
-                 height="60px"
-               />
-                <!-- <i style="font-size: 45px;border: 4px solid black;border-radius: 70%;padding: 8px"  class="fa fa-car-crash"></i> -->
-                <br>  <h6>Se connecter à votre <b>Compte</b></h6>
-              </div>
-
-            </div>
-            <hr>
-            <!-- <br> -->
-          </div>
-
-
-          <div class="col-md-12" style="color: black">
-            <mat-form-field appearance="outline">
-              <mat-label
-              ><i class="fas fa-user-tie"></i> Saisir votre e-mail
-              </mat-label>
-              <input matInput placeholder="mail@gmail.com" type="email" required />
-            </mat-form-field>
-          </div>
+    <div class="col-md-6 ">
+      <span style="text-align: center">
+        <h1>School Management System</h1>
+        <h3>H. A. H. 2.0</h3>
+      </span>
+      <img src="/assets/images/team.svg" style="opacity: 0.9;
+      margin-top: 60px;" alt="Cap Image" height="370px" />
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-4">      <img src="../assets/images/cap.svg" alt="Cap Image" height="130px" />
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <mat-form-field appearance="outline">
-              <mat-label><i class="fa fa-lock"></i> Mot de passe </mat-label>
-              <input matInput placeholder="*******" type="password" required />
-            </mat-form-field>
-          </div>
+        <div class="col-md-4">      <img src="../assets/images/cap.svg" alt="Cap Image" height="60px" style="float: right;" />
         </div>
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-6">
-            <button class="btn btn-block" type="submit" mat-stroked-button style="background-color: white;
-            color: black;
-
-            padding: 2px;" (click)="login()">
-              <i class="fa fa-paper-plane"></i> <b> Se Connecter</b>
-            </button>
-          </div>
-          <div class="col-md-3"></div>
+        <div class="col-md-4">      <img src="../assets/images/cap.svg" alt="Cap Image" height="40px" />
         </div>
       </div>
-    </mat-card>
-  </div>
-    <div class="col-md-4 team" >
 
+      <mat-card
+        style="
+          box-shadow: 0px 13px 90px -7px #a5a5a5;
+          background-color: #042954;
+
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12" style="text-align: center">
+                  <img
+                    src="../assets/images/driving-school/svg/009-driving school.svg"
+                    alt="Login Image"
+                    height="60px"
+                  />
+                  <!-- <i style="font-size: 45px;border: 4px solid black;border-radius: 70%;padding: 8px"  class="fa fa-car-crash"></i> -->
+                  <br />
+                  <h6 style="color: #ff9d01;">Se connecter à votre <b>Compte</b></h6>
+                </div>
+              </div>
+              <hr />
+              <!-- <br> -->
+            </div>
+
+            <div class="col-md-12" style="color: black">
+              <mat-form-field appearance="outline">
+                <mat-label
+                  ><i class="fas fa-user-tie"></i> Saisir votre e-mail
+                </mat-label>
+                <input
+                  matInput
+                  placeholder="mail@gmail.com"
+                  type="email"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <mat-form-field appearance="outline">
+                <mat-label><i class="fa fa-lock"></i> Mot de passe </mat-label>
+                <input
+                  matInput
+                  placeholder="*******"
+                  type="password"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <button
+                class="btn btn-block"
+                type="submit"
+                mat-stroked-button
+                style="
+                  background-color: #f7ae39;
+    color: #042954;
+
+                  padding: 2px;
+                "
+                (click)="login()"
+              >
+                <i class="fa fa-paper-plane"></i> <b> Se Connecter</b>
+              </button>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <div class="col-md-2">
+      <img src="../assets/images/cap.svg" alt="Cap Image" height="35px" style="float: left;" />
     </div>
   </div>
 </div>
-

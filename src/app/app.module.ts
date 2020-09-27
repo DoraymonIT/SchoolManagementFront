@@ -29,6 +29,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef} from "@angular/material/dialog";
+import {MatStepperModule} from '@angular/material/stepper';
 
 /* Autres  */
 import {ConfirmDialogModule, FileUploadModule, TableModule} from 'primeng';
@@ -36,14 +37,11 @@ import {TabViewModule} from 'primeng/tabview';
 import {FieldsetModule} from 'primeng/fieldset';
 import {CardModule} from 'primeng/card';
 import {ChartModule} from 'primeng/chart';
-/** Components **/
-import { AppComponent } from './app.component';
-
-
-
-import {MatStepperModule} from '@angular/material/stepper';
 import {MatSelectFilterModule} from "mat-select-filter";
 import {ToastrModule} from "ngx-toastr";
+
+/** Components **/
+import { AppComponent } from './app.component';
 import { LoginSideComponent } from './login-side/login-side.component';
 import { AdminSideComponent } from './admin-side/admin-side.component';
 import { OverviewComponent } from './admin-side/overview/overview.component';
