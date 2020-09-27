@@ -1,0 +1,35 @@
+.mat-form-field {
+  width: 100%;
+}
+.images {
+  background-image: url("/assets/images/back1.jpg");
+
+  background-size: contain;
+  /* Full height */
+
+/*opacity: 0.5%;*/
+  /* Center and scale the image nicely */
+
+  /*background-image: radial-gradient( circle farthest-corner at 5.6% 54.5%,  rgba(47,71,79,1) 0%, rgba(159,188,198,1) 83.6% );*/
+  /* Mumkiin tbddl back1 w tddir back2 wlla back3 w chuuf lli 3jbattk  */
+  position: relative;
+}
+.mat-card {
+  margin-bottom: 70px;
+}
+.cap{
+    background-image: url("/assets/images/cap.svg");
+    opacity: 0.9;
+}
+.team{
+    background-image: url("/assets/images/team.svg");
+    opacity: 0.9;
+    margin-top: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .fs {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~ngx-toastr/toastr';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button:focus {
+  outline: 1px none;
+}
+.mat-menu-panel {
+  max-width: 580px !important;
+}
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active, body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active, body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active, body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active {
+    background-color: cadetblue !important;
+    border: 1px solid cadetblue !important;
+}
+body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active:hover, body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active:hover, body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active:hover, body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active:hover {
+  border: 1px solid cadetblue !important;
+  background-color: cadetblue !important;
+}
+
+ .mat-tab-group[mat-stretch-tabs]>.mat-tab-header .mat-tab-label {
+   flex-basis: 0;
+   flex-grow: 1;
+   background-color: cadetblue!important;
+   color: white!important;
+   font-size: 15px!important;
+   font-weight: bold!important;
+ }
+.span {
+  margin: auto;
+}
+.btn-add{
+
+  background-color: cadetblue!important;
+  color: black!important;
+  float: left;
+  margin-top: -5px;
+
+
+}
+.btn-custom{
+margin-left: 4px;
+margin-right: 4px;
+}
+body .ui-table .ui-sortable-column.ui-state-highlight {
+    background-color: cadetblue!important;
+    color: #ffffff;
+}
+body .ui-card {
+  background-color: #abd7d8!important;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit {
+  background-color: cadetblue!important;
+  color: #fff;
+}

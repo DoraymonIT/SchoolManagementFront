@@ -1,0 +1,50 @@
+
+.icons {
+  margin: 10px;
+}
+
+#menu1 {
+  display: none;
+}
+
+.example-tree-progress-bar {
+  margin-left: 30px;
+}
+.fa , .fas{
+ color: #ff9d01
+}
+.mat-menu-content {
+  height: 100px;
+}
+.list2{
+  color:white;
+}
+.list2:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  /* padding-left: 1px; */
+background-color: #86b6b7;
+}
+
+.span {
+  margin: auto;
+}
+
+.boxShadow {
+  box-shadow: -10px 1px 25px -10px black;
+  background-color: #042954;
+}
+
+mat-sidenav {
+  box-shadow: -15px 10px 35px -1px black;
+  position: fixed;
+}
+
+.then {
+  padding-left: 15px;
+}
+/*Hnaya ila ma3jbkch le noir , dirru white -> */
+h6{
+
+  color:white ;
+}
