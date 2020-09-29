@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-admin-side',
-  templateUrl: './admin-side.component.html',
-  styleUrls: ['./admin-side.component.css']
+  selector: "app-admin-side",
+  templateUrl: "./admin-side.component.html",
+  styleUrls: ["./admin-side.component.css"],
 })
 export class AdminSideComponent implements OnInit {
-
-constructor() {
+  constructor() {
     this.hideMatBadge = false;
     this.ex = 3;
     this.aujourdHui = new Date();
@@ -21,17 +20,14 @@ constructor() {
   hideMatBadge: boolean;
   ex: number;
 
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 
   time = new Date();
 
   badge() {
     this.hideMatBadge = true;
   }
-seDeconnecter(){
-  localStorage.removeItem("login");
-}
+  seDeconnecter() {
+    localStorage.removeItem("login");
+  }
 }
