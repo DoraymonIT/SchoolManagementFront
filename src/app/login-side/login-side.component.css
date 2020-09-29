@@ -5,7 +5,12 @@
 /* .mat-card {
   margin-bottom: 70px;
 } */
-
+.image{
+  background-image: url("/assets/images/hh.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
 @media (max-width: 768px) {
   .fs {
     display: none;
