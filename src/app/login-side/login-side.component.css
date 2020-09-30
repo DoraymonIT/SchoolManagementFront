@@ -6,6 +6,7 @@
   margin-bottom: 70px;
 } */
 .image{
+  /* U can replace hh.png with hh1.jpg and see the magic baby*/
   background-image: url("/assets/images/hh.png");
   background-size: cover;
   background-repeat: no-repeat;

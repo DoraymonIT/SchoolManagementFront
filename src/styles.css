@@ -10,7 +10,7 @@ button:focus {
   outline: 1px none;
 }
 .mat-menu-panel {
-  max-width: 580px !important;
+  max-width: 500px !important;
 }
 body .ui-tabview.ui-tabview-top .ui-tabview-nav li.ui-state-active, body .ui-tabview.ui-tabview-bottom .ui-tabview-nav li.ui-state-active, body .ui-tabview.ui-tabview-left .ui-tabview-nav li.ui-state-active, body .ui-tabview.ui-tabview-right .ui-tabview-nav li.ui-state-active {
     background-color: cadetblue !important;

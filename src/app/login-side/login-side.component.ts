@@ -12,13 +12,10 @@ import { Router } from "@angular/router";
 export class LoginSideComponent implements OnInit {
   nom: string;
   password: string;
-  showErrors;
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
   login() {
     this.router.navigateByUrl("admin");
-
-    // this.utlisateurService.seConnecter(this.utilisateu.login, this.utilisateu.modDePasse);
   }
 }

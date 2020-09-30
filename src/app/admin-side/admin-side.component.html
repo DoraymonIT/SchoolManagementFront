@@ -117,22 +117,23 @@
             style="font-size: 22px; color: whitesmoke"
           ></i>
         </button> -->
-        <button
+        <button (click)="badgeMessage()"
           class="icons"
           mat-icon-button
           matTooltip="This is your messages"
+          [matMenuTriggerFor]="menuMessage"
         >
           <i
             class="fas fa-envelope"
             style="font-size: 22px; color: whitesmoke"
-            [matBadge]="ex"
+            [matBadge]="exMessage"
             matBadgePosition="above after"
             matBadgeSize="small"
-            [matBadgeHidden]="hideMatBadge"
+            [matBadgeHidden]="hideMatBadgeMessage"
             matBadgeColor="primary"
           ></i>
         </button>
-        <button mat-icon-button [matMenuTriggerFor]="menu" (click)="badge()">
+        <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="This is your notifications" (click)="badge()">
           <i
             class="fas fa-bell"
             style="cursor: pointer; font-size: 18px; color: whitesmoke"
@@ -144,14 +145,49 @@
           ></i>
         </button>
         <mat-menu class="my-class" #menu="matMenu" xPosition="before">
-          <div class="container-fluid">
+          <div class="container-fluid" style="text-align: center;" >
+            <div class="row"  style="
+            background-color:  #042954;
+            color: #f7ae39 ;
+            text-align: center;
+            padding: 15px;
+          ">
+              <h4 style="text-align: center;" >Notifications</h4>
+            </div>
             <div class="row">
-              <div class="col-md-2">
-                Ha Anya
+
+              <div class="col-md-12" style="text-align: center">
+                Notofication
                 <br />
                 <mat-divider></mat-divider>
+                <p style="text-align: center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus commodi quibusdam perspiciatis alias nobis voluptas
+                  eaque? Laboriosam odio, sed illo quis eligendi consequuntur
+                  saepe nulla ullam soluta veniam suscipit blanditiis.
+                </p>
+                <button mat-raised-button style="text-align: center">
+                  <i class="fas fa-check-double"></i> Marquer tous ca comme
+                  lu(e)s
+                </button>
               </div>
-              <div class="col-md-8" style="text-align: center">
+
+            </div>
+          </div>
+        </mat-menu>
+        <mat-menu class="my-class" #menuMessage="matMenu" xPosition="before">
+          <div class="container-fluid">
+            <div class="row"  style="
+            background-color:  #042954;
+            color: #f7ae39 ;text-align: center;
+
+            padding: 15px;
+          ">
+              <h4 style="text-align: center;" >Messages</h4>
+            </div>
+            <div class="row">
+
+              <div class="col-md-12" style="text-align: center">
                 Ha Anya
                 <br />
                 <mat-divider></mat-divider>
@@ -167,11 +203,6 @@
                 </button>
               </div>
 
-              <div class="col-md-2">
-                Ha Anya
-                <br />
-                <mat-divider></mat-divider>
-              </div>
             </div>
           </div>
         </mat-menu>
@@ -184,7 +215,7 @@
         >
           <i class="fas fa-cog" style="font-size: 16px"></i>
         </button>
-        <mat-menu #menu2="matMenu">
+        <mat-menu #menu2="matMenu" style="background-color:  #042954;">
           <button
             mat-menu-item
             [routerLink]="[{ outlets: { un: ['settings'] } }]"
