@@ -9,6 +9,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button:focus {
   outline: 1px none;
 }
+
+.mat-list-item:focus {
+  outline: 1px none;
+}
 .mat-menu-panel {
   max-width: 500px !important;
 }

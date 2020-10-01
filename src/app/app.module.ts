@@ -35,6 +35,9 @@ import {
   MatDialogRef,
 } from "@angular/material/dialog";
 import { MatStepperModule } from "@angular/material/stepper";
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 
 /* Autres  */
 import { ConfirmDialogModule, FileUploadModule, TableModule } from "primeng";
@@ -104,6 +107,9 @@ import { TeachersComponent } from "./admin-side/teachers/teachers.component";
     CardModule,
     ChartModule,
     ConfirmDialogModule,
+  MatSortModule,
+  MatPaginatorModule,
+MatTableModule,
   ],
   providers: [
     {
