@@ -22,12 +22,12 @@
 .padd{
   padding-left:10px
 }
-/* .list2:hover {
+.list2:hover {
   cursor: pointer;
-  border-radius: 10px;
-   padding-left: 1px;
-background-color: #86b6b7;
-} */
+  /* border-radius: 10px; */
+   /* padding-left: 1px; */
+/* background-color: #86b6b7; */
+}
 
 .span {
   margin: auto;
