@@ -18,7 +18,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatBadgeModule } from "@angular/material/badge";
 import { MatButtonModule } from "@angular/material/button";
 import { MatTreeModule } from "@angular/material/tree";
-import { MatProgressBarModule } from "@angular/material/progress-bar";
+// import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { MatListModule } from "@angular/material/list";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatDividerModule } from "@angular/material/divider";
@@ -35,16 +35,16 @@ import {
   MatDialogRef,
 } from "@angular/material/dialog";
 import { MatStepperModule } from "@angular/material/stepper";
-import {MatSortModule} from '@angular/material/sort';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableModule} from '@angular/material/table';
+import { MatSortModule } from "@angular/material/sort";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatTableModule } from "@angular/material/table";
 
 /* Autres  */
-import { ConfirmDialogModule, FileUploadModule, TableModule } from "primeng";
-import { TabViewModule } from "primeng/tabview";
-import { FieldsetModule } from "primeng/fieldset";
-import { CardModule } from "primeng/card";
-import { ChartModule } from "primeng/chart";
+// import { ConfirmDialogModule, FileUploadModule, TableModule } from "primeng";
+// import { TabViewModule } from "primeng/tabview";
+// import { FieldsetModule } from "primeng/fieldset";
+// import { CardModule } from "primeng/card";
+// import { ChartModule } from "primeng/chart";
 import { MatSelectFilterModule } from "mat-select-filter";
 import { ToastrModule } from "ngx-toastr";
 
@@ -55,6 +55,8 @@ import { AdminSideComponent } from "./admin-side/admin-side.component";
 import { OverviewComponent } from "./admin-side/overview/overview.component";
 import { StudentsComponent } from "./admin-side/students/students.component";
 import { TeachersComponent } from "./admin-side/teachers/teachers.component";
+import { CreateTeacherComponent } from "./admin-side/create-teacher/create-teacher.component";
+import { CreateStudentComponent } from "./admin-side/create-student/create-student.component";
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { TeachersComponent } from "./admin-side/teachers/teachers.component";
     OverviewComponent,
     StudentsComponent,
     TeachersComponent,
+    CreateTeacherComponent,
+    CreateStudentComponent,
   ],
   imports: [
     FormsModule,
@@ -86,7 +90,7 @@ import { TeachersComponent } from "./admin-side/teachers/teachers.component";
     MatBadgeModule,
     MatButtonModule,
     MatTreeModule,
-    MatProgressBarModule,
+    // MatProgressBarModule,
     MatListModule,
     MatNativeDateModule,
     MatDialogModule,
@@ -97,19 +101,19 @@ import { TeachersComponent } from "./admin-side/teachers/teachers.component";
     MatTooltipModule,
     MatExpansionModule,
     MatDatepickerModule,
-    FileUploadModule,
+    // FileUploadModule,
     MatRadioModule,
     MatCardModule,
-    TabViewModule,
-    FieldsetModule,
-    TableModule,
+    // TabViewModule,
+    // FieldsetModule,
+    // TableModule,
     MatStepperModule,
-    CardModule,
-    ChartModule,
-    ConfirmDialogModule,
-  MatSortModule,
-  MatPaginatorModule,
-MatTableModule,
+    // CardModule,
+    // ChartModule,
+    // ConfirmDialogModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatTableModule,
   ],
   providers: [
     {
@@ -125,4 +129,4 @@ MatTableModule,
   bootstrap: [AppComponent],
   entryComponents: [],
 })
-export class AppModule {}
+export class AppModule { }

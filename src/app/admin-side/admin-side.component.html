@@ -52,7 +52,7 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingThree" data-parent="#accordionTeacher">
           <mat-list-item
           class="list2 "
-          role="listitem"    [routerLink]="[{ outlets: { un: ['teachers'] } }]"
+          role="listitem"    [routerLink]="[{ outlets: { un: ['teachers-list'] } }]"
           routerLinkActive="active"
         >
           <h6 class="padd" >
@@ -62,7 +62,8 @@
         <mat-divider></mat-divider>
         <mat-list-item
         class="list2 "
-        role="listitem"
+        role="listitem" [routerLink]="[{ outlets: { un: ['teacher-create'] } }]"
+        routerLinkActive="active"
       >
         <h6 class="padd">
          <span class="then"></span> Create
@@ -70,7 +71,7 @@
       </mat-list-item>
       </div>
     </div>
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <mat-divider></mat-divider>
       <mat-list-item
 
@@ -88,7 +89,7 @@
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
             <mat-list-item
             class="list2 "
-            role="listitem"  [routerLink]="[{ outlets: { un: ['students'] } }]"
+            role="listitem"  [routerLink]="[{ outlets: { un: ['students-list'] } }]"
             routerLinkActive="active"
           >
             <h6 class="padd">
@@ -98,7 +99,8 @@
           <mat-divider></mat-divider>
           <mat-list-item
           class="list2 "
-          role="listitem"
+          role="listitem" [routerLink]="[{ outlets: { un: ['student-creaters'] } }]"
+          routerLinkActive="active"
         >
           <h6 class="padd">
            <span class="then"></span> Create

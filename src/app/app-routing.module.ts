@@ -5,7 +5,8 @@ import { AdminSideComponent } from './admin-side/admin-side.component';
 import { StudentsComponent } from './admin-side/students/students.component';
 import { OverviewComponent } from './admin-side/overview/overview.component';
 import { TeachersComponent } from './admin-side/teachers/teachers.component';
-
+import { CreateTeacherComponent } from './admin-side/create-teacher/create-teacher.component';
+import { CreateStudentComponent } from './admin-side/create-student/create-student.component';
 
 
 const routes: Routes = [
@@ -27,14 +28,22 @@ const routes: Routes = [
        component: OverviewComponent,
        outlet: 'un'
       }, {
-        path: 'students',
+        path: 'students-list',
         component : StudentsComponent,
         outlet: 'un'
       }, {
-        path: 'teachers',
+        path: 'student-create',
+        component : CreateStudentComponent,
+        outlet: 'un'
+      }, {
+        path: 'teachers-list',
         component : TeachersComponent,
         outlet: 'un'
-      }
+      }, {
+        path: 'teacher-create',
+        component : CreateTeacherComponent,
+        outlet: 'un'
+      },
     ]
   }
   ,{
