@@ -1,7 +1,7 @@
 /**Angular Core Imports **/
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormBuilder, FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
@@ -71,7 +71,6 @@ import { CreateStudentComponent } from "./admin-side/create-student/create-stude
   ],
   imports: [
     FormsModule,
-    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -129,4 +128,4 @@ import { CreateStudentComponent } from "./admin-side/create-student/create-stude
   bootstrap: [AppComponent],
   entryComponents: [],
 })
-export class AppModule { }
+export class AppModule {}

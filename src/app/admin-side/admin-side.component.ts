@@ -1,17 +1,18 @@
 import { Component, OnInit } from "@angular/core";
-
+import {Title} from "@angular/platform-browser";
 @Component({
   selector: "app-admin-side",
   templateUrl: "./admin-side.component.html",
   styleUrls: ["./admin-side.component.css"],
 })
 export class AdminSideComponent implements OnInit {
-  constructor() {
+  constructor(private titleService:Title) {
     this.hideMatBadge = false;
     this.hideMatBadgeMessage = false;
     this.ex = 3;
     this.exMessage = 5;
     this.aujourdHui = new Date();
+    this.titleService.setTitle("Dashoboard");
   }
 
   aujourdHui: Date;

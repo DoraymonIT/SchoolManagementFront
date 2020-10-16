@@ -4,6 +4,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
+import {Title} from "@angular/platform-browser";
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -33,7 +34,9 @@ export class TeachersComponent implements OnInit {
   displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
-
+  constructor(private titleService:Title) {
+    this.titleService.setTitle("List of teaches");
+  }
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
