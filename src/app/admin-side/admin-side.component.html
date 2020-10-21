@@ -5,7 +5,7 @@
     [(opened)]="opened"
     style="
       padding: 15px;
-      width: 280px;
+      width: 300px;
       transform: none;
       background-color: #042954;
       visibility: visible;
@@ -15,7 +15,11 @@
     <mat-list role="list">
       <mat-list-item role="listitem">
         <span style="text-align: center" class="span">
-          <img src="../assets/images/cap.svg" alt="Login Image" height="50px" />
+          <img
+            src="../assets/images/school-icons/svg/048-abc block.svg"
+            alt="Login Image"
+            height="50px"
+          />
           <br />
           H. A. H. 2.0
         </span>
@@ -25,7 +29,7 @@
         routerLinkActive="active"
         class="list2"
         role="listitem"
-        style="margin-top: 50px;"
+        style="margin-top: 50px"
       >
         <h6>
           <i class="fas fa-home"></i> <span class="then"></span> Tableau de bord
@@ -44,13 +48,12 @@
       >
         <h6>
           <i class="fas fa-users-cog"></i><span class="then"></span> Teachers
-          <span class="then1"></span>
+          <span style="padding-left: 90px"></span>
           <i class="fa fa-angle-{{ icon2 }}" aria-hidden="true"></i>
         </h6>
         <br />
       </mat-list-item>
       <div id="accordionTeacher" style="background-color: #0d2644">
-        <!-- <mat-divider></mat-divider> -->
         <div
           id="collapseOne"
           class="collapse"
@@ -95,7 +98,8 @@
       >
         <h6>
           <i class="fa fa-child"></i><i class="fa fa-child"></i
-          ><span class="then"></span>Students <span class="then1"></span>
+          ><span class="then"></span>Students
+          <span style="padding-left: 91px"></span>
           <i class="fa fa-angle-{{ icon }}" aria-hidden="true"></i>
         </h6>
         <br />
@@ -136,6 +140,259 @@
       <mat-divider></mat-divider> <mat-divider></mat-divider>
       <mat-list-item
         class="list2"
+        (click)="changeIcon4()"
+        role="listitem"
+        data-toggle="collapse"
+        data-target="#collapseFour"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        <h6>
+          <i class="fas fa-user-friends"></i><span class="then"></span> Parents
+          <span style="padding-left: 100px"></span
+          ><i class="fa fa-angle-{{ icon4 }}" aria-hidden="true"></i>
+        </h6>
+        <br />
+      </mat-list-item>
+      <div id="accordion" style="background-color: #0d2644">
+        <div
+          id="collapseFour"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> List
+            </h6>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> Create
+            </h6>
+          </mat-list-item>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider> <mat-divider></mat-divider>
+      <mat-list-item
+        class="list2"
+        (click)="changeIcon5()"
+        role="listitem"
+        data-toggle="collapse"
+        data-target="#collapseFive"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        <h6>
+          <i class="fas fa-toilet-paper    "></i><span class="then"></span> Devoirs
+          <span style="padding-left: 100px"></span
+          ><i class="fa fa-angle-{{ icon5 }}" aria-hidden="true"></i>
+        </h6>
+        <br />
+      </mat-list-item>
+      <div id="accordion" style="background-color: #0d2644">
+        <div
+          id="collapseFive"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> List
+            </h6>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> Create
+            </h6>
+          </mat-list-item>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider> <mat-divider></mat-divider>
+      <mat-list-item
+        class="list2"
+        (click)="changeIcon6()"
+        role="listitem"
+        data-toggle="collapse"
+        data-target="#collapseSix"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        <h6>
+          <i class="fa fa-archive" aria-hidden="true"></i
+          ><span class="then"></span> Matieres
+          <span style="padding-left: 92px"></span>
+          <i class="fa fa-angle-{{ icon6 }}" aria-hidden="true"></i>
+        </h6>
+        <br />
+      </mat-list-item>
+      <div id="accordion" style="background-color: #0d2644">
+        <div
+          id="collapseSix"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> List
+            </h6>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> Create
+            </h6>
+          </mat-list-item>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider> <mat-divider></mat-divider>
+      <mat-list-item
+        class="list2"
+        (click)="changeIcon7()"
+        role="listitem"
+        data-toggle="collapse"
+        data-target="#collapseSeven"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        <h6>
+          <i class="fa fa-building" aria-hidden="true"></i
+          ><span class="then"></span> &nbsp;Locaux
+          <span style="padding-left: 101px"></span
+          ><i class="fa fa-angle-{{ icon7 }}" aria-hidden="true"></i>
+        </h6>
+        <br />
+      </mat-list-item>
+      <div id="accordion" style="background-color: #0d2644">
+        <div
+          id="collapseSeven"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> List
+            </h6>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> Create
+            </h6>
+          </mat-list-item>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider> <mat-divider></mat-divider>
+
+      <mat-list-item
+        class="list2"
+        (click)="changeIcon8()"
+        role="listitem"
+        data-toggle="collapse"
+        data-target="#collapseEight"
+        aria-expanded="false"
+        aria-controls="collapseThree"
+      >
+        <h6>
+          <i class="fas fa-money-bill"></i><span class="then"></span> Etat
+          Financiere <span style="padding-left: 43px"></span>
+          <i class="fa fa-angle-{{ icon8 }}" aria-hidden="true"></i>
+        </h6>
+        <br />
+      </mat-list-item>
+      <div id="accordion" style="background-color: #0d2644">
+        <div
+          id="collapseEight"
+          class="collapse"
+          aria-labelledby="headingThree"
+          data-parent="#accordion"
+        >
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> List
+            </h6>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item
+            class="list2"
+            role="listitem"
+            [routerLink]="[{ outlets: { un: [''] } }]"
+            routerLinkActive="active"
+          >
+            <h6 class="padd">
+              <span class="then"></span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i> Create
+            </h6>
+          </mat-list-item>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-divider></mat-divider> <mat-divider></mat-divider>
+      <mat-list-item
+        class="list2"
         (click)="changeIcon3()"
         role="listitem"
         data-toggle="collapse"
@@ -145,7 +402,7 @@
       >
         <h6>
           <i class="fas fa-book"></i><span class="then"></span> &nbsp;Cours
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="then1"></span>
+          <span style="padding-left: 109px"></span>
           <i class="fa fa-angle-{{ icon3 }}" aria-hidden="true"></i>
         </h6>
         <br />
@@ -188,39 +445,12 @@
         <h6><i class="fas fa-cog"></i> <span class="then"></span> Settings</h6>
       </mat-list-item>
       <mat-divider></mat-divider>
-      <!-- <mat-list-item
-        [routerLink]="[{ outlets: { un: ['calender'] } }]" routerLinkActive="active"
-        class="list2"
-        role="listitem"
-      >
-        <h6>   <i class="fas fa-calendar-alt    "></i>
-<span class="then"></span> Calendrier d'examen</h6>
-      </mat-list-item>
-      <mat-divider></mat-divider> -->
-      <!-- <mat-list-item
-        [routerLink]="[{ outlets: { un: ['shipping'] } }]" routerLinkActive="active"
-        class="list2"
-        role="listitem"
-      >
-        <h6><i class="fas fa-truck"></i> <span class="then"></span> Shipping</h6>
-      </mat-list-item>
-      <mat-divider></mat-divider> -->
-      <!-- <mat-list-item
-        [routerLink]="[{ outlets: { un: ['settings'] } }]" routerLinkActive="active"
-        class="list2"
-        role="listitem"
-      >
-        <h6 ><i class="fas fa-cogs "></i> <span class="then"></span> Paramètres</h6>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <br><br><br><br>
-      <h6 style="text-align: center;color: white;font-size: 10px;bottom: 0">
-        © Coding with Love <i class="fas fa-heart    "></i> by BENDRIMOU | 2020 </h6> -->
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <nav class="navbar navbar-dark boxShadow">
       <button
+        matTooltip="ToogLe !!"
         mat-mini-fab
         style="background-color: whitesmoke"
         (click)="sidenav.toggle(); changeIcon1()"
@@ -229,12 +459,6 @@
       </button>
       <img src="../assets/images/cap.svg" alt="Login Image" height="40px" />
       <form class="form-inline my-lg-0">
-        <!-- <button class="icons" mat-icon-button matTooltip="This is your profile">
-          <i
-            class="fas fa-user-circle"
-            style="font-size: 22px; color: whitesmoke"
-          ></i>
-        </button> -->
         <button
           (click)="badgeMessage()"
           class="icons"
@@ -365,7 +589,29 @@
           >
             <i class="fas fa-sign-out-alt"></i> <b> Se déconnecter</b>
           </button>
-          <!-- <button mat-menu-item>Autres</button> -->
+        </mat-menu>
+
+        <button
+          class="icons"
+          style="background-color: whitesmoke"
+          mat-mini-fab
+          matTooltip="Langue"
+          [matMenuTriggerFor]="language"
+        >
+          <i class="fas fa-globe" style="font-size: 16px"></i>
+        </button>
+        <mat-menu #language="matMenu">
+          <button mat-menu-item style="color: white">
+            <i class="fa fa-language" aria-hidden="true"></i> Fr
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item style="color: white">
+            <i class="fa fa-language" aria-hidden="true"></i> Ar
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item style="color: white">
+            <i class="fa fa-language" aria-hidden="true"></i> Eng
+          </button>
         </mat-menu>
       </form>
     </nav>
