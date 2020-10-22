@@ -35,9 +35,6 @@ import {
   MatDialogRef,
 } from "@angular/material/dialog";
 import { MatStepperModule } from "@angular/material/stepper";
-import { MatSortModule } from "@angular/material/sort";
-import { MatPaginatorModule } from "@angular/material/paginator";
-import { MatTableModule } from "@angular/material/table";
 
 /* Autres  */
 // import { ConfirmDialogModule, FileUploadModule, TableModule } from "primeng";
@@ -110,9 +107,6 @@ import { CreateStudentComponent } from "./admin-side/create-student/create-stude
     // CardModule,
     // ChartModule,
     // ConfirmDialogModule,
-    MatSortModule,
-    MatPaginatorModule,
-    MatTableModule,
   ],
   providers: [
     {
