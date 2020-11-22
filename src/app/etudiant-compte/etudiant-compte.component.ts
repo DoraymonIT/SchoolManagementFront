@@ -11,11 +11,12 @@ export class EtudiantCompteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  public openNav() {
-    document.getElementById('mySidenav').style.width = '350px';
-  }
-
-  public closeNav() {
-    document.getElementById('mySidenav').style.width = '0';
+public displayInformationPersonnel(){
+    document.getElementById('informationPersonnel').style.display = 'inline-block';
+    document.getElementById('couretexercice').style.display = 'none';
+}
+  public displayCouretExercice(){
+    document.getElementById('couretexercice').style.display = 'inline-block';
+    document.getElementById('informationPersonnel').style.display = 'none';
   }
 }

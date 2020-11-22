@@ -1,152 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Admin template</title>
+  <style>
+    .bg-indigo{
+      background-color: indigo;
+    }
+    .text-indigo{
+      color: #4b0082;
+    }
+    .search-class{
+      display: none;
+    }
+    .cursor{
+      cursor: pointer;
+    }
+    .btn:focus {
+      box-shadow: none;
+    }
+    .list-group-item a{
+      color: white;
+    }
+    .list-group-item:hover{
+      background-color: white;
+    }
+    .list-group-item:hover .nav-link{
+      color: indigo;
+    }
+
+  </style>
 </head>
 <body>
+<div class="row no-getters">
+  <!--sidebar-->
+  <div class="col-xl-2 col-md-3 col-sm-12" id="side-bar">
+    <ul class="list-group list-group-flush fixed shadow-sm" >
+      <li class="list-group-item bg-indigo "><a href="#" class="nav-link  text-center">
+        <img src="../assets/images/person-logo.jpg" class="shadow" style="height: 100px; width: 100px;border-radius: 50%;">
+        <h5>Hamza Shadeau</h5>
+        <div class="small"><em>ETUDIANT EN 3PR</em></div>
+      </a></li>
+      <li class="list-group-item bg-indigo " style="height: 80px" (click)="displayInformationPersonnel()"><a class="nav-link"><span class="fas fa-info"></span>  Information Personnel</a> </li>
+      <li class="list-group-item bg-indigo " style="height: 80px" (click)="displayCouretExercice()"><a class="nav-link"><span class="far fa-calendar-times"></span>  retard et Absences</a></li>
+      <li class="list-group-item bg-indigo " style="height: 80px"><a  class="nav-link"><span class="fas fa-book"></span>  cours et exercices</a></li>
+      <li class="list-group-item bg-indigo " style="height: 80px"><a class="nav-link"><i class="far fa-calendar-alt"></i>  emploi du temps</a></li>
+      <li class="list-group-item bg-indigo " style="height: 80px"><a class="nav-link"><span class="fas fa-sign-out-alt"></span>deconnection</a></li>
+      <li class="list-group-item bg-indigo " style="height: 80px"></li>
+      <li class="list-group-item bg-indigo " style="height: 80px"></li>
 
-<div id="mySidenav" class="sidenav">
-  <a  href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a class="sidenavA" href="#"><i class="fas fa-info"></i>  Information Personnel</a>
-  <a class="sidenavA" href="#"><i class="far fa-calendar-times"></i>  retard et Absences</a>
-  <a class="sidenavA" href="#"><i class="fas fa-book"></i>  cours et exercices</a>
-  <a class="sidenavA" href="#"><i class="far fa-calendar-alt"></i>  emploi du temps</a>
+    </ul>
+  </div>
+  <!--content-->
+  <div class="col-xl-10 col-md-9 col-sm-12" id="content">
+    <nav class="navbar  navbar-light bg-white" id="navbar" style="position: relative;height: 30px">
+<!--      <a class="navbar-brand fixed" id="toggler"><span class="fa fa-bars text-indigo"></span></a>-->
+        <img src="../assets/images/logo.png" width="40px" height="40px" style="position: absolute; left: 600px">
+       <!-- <button class="btn bg-transaprent border-0 search-btn"><span class="fa fa-search text-indigo"></span></button>-->
+      <!--  <button class="btn bg-transaprent border-0"><span class="fa fa-user text-indigo"></span></button>-->
+      <!--
+          search
+      -->
+<!--      <div class="form-group search-class w-100 mt-2" id="search">
+        <div class="input-group shadow-sm">
+          <div class="input-group-prepend">
+            <button class="btn bg-indigo text-white"><span class="fa fa-search"></span></button>
+          </div>
+          <input type="text" placeholder="search" class="form-control">
+          <div class="input-group-append">
+            <button class="btn bg-indigo text-white search-btn"><span class="fa fa-times"></span></button>
+          </div>
+        </div>
+      </div>-->
+    </nav>
+    <div class="row my-3 mx-3">
+      <div class="col-md-3">
+        <div class="card bg-indigo shadow-sm p-3 text-white text-center border-0 cursor">
+          <h5> <span class="fa fa-home"></span> Home</h5>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-light shadow-sm p-3 text-indigo text-center border-0 cursor">
+          <h5><span class="fa fa-users"></span> Users</h5>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-indigo shadow-sm p-3 text-white text-center border-0 cursor">
+          <h5><span class="fa fa-columns"></span> Statistics</h5>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card bg-light shadow-sm p-3 text-indigo text-center border-0 cursor">
+          <h5><span class="fa fa-cogs"></span> Settings</h5>
+        </div>
+      </div>
+    </div>
+    <!--Charts-->
+    <div id="informationPersonnel" class="container p-shadow-20"style="border: 3px  solid wheat;box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);z-index: 2;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Information Personnel</li>
+        </ol>
+      </nav>
+      <h1 style="color: #470E87;  font: normal 36px 'Cookie', cursive;text-align: center;"><span style="border-bottom: 3px solid black">Information Personnel</span></h1>
+      <div class="row" >
+        <div class="col-sm-2">
+          <img src="../assets/images/person-logo.jpg" style="border-radius: 25px" width="90px" height="90px">
+        </div>
+        <div class="col-sm-5"></div>
+        <div class="col-sm-5"></div>
+      </div>
+      <br>
+      <div class="row" >
+        <div class="col-6">
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Preom :</strong> hamza</h4>
+          <h4><strong>Age :</strong> 21 ans</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Age :</strong> 21 ans</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+        </div>
+        <div class="col-6">
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Preom :</strong> hamza</h4>
+          <h4><strong>Age :</strong> 21 ans</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Age :</strong> 21 ans</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+          <h4><strong>Nom :</strong> shadeau</h4>
+        </div>
+      </div>
+    </div>
+    <div id="couretexercice" class="container"style="border: 2px  solid black;box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);z-index: 2;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cours & Exercices</li>
+        </ol>
+      </nav>
+      <h1 style="color: #470E87;  font: normal 36px 'Cookie', cursive;text-align: center;"><span style="border-bottom: 3px solid black">Cours et exercices</span></h1>
+      <br>
+    <div class="row" >
+      <div class="col-md-6 col-12">
+        <div class=" shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Cours</div>
+        <table class="table table-hover table-striped">
+          <thead>
+          <tr>
+            <th>nom</th>
+            <th>matiere</th>
+            <th>lien</th>
+            <th>date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>nom1</td>
+            <td>matiere1</td>
+            <td>lien1</td>
+            <td>date1</td>
+          </tr>
+          <tr>
+            <td>nom2</td>
+            <td>matiere2</td>
+            <td>lien2</td>
+            <td>date2</td>
+          </tr>
+          <tr>
+            <td>nom3</td>
+            <td>matiere3</td>
+            <td>lien3</td>
+            <td>date3</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class=" shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Exercice</div>
+        <table class="table table-hover table-striped">
+          <thead>
+          <tr>
+            <th>nom</th>
+            <th>matiere</th>
+            <th>lien</th>
+            <th>date</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>nom1</td>
+            <td>matiere1</td>
+            <td>lien1</td>
+            <td>date1</td>
+          </tr>
+          <tr>
+            <td>nom2</td>
+            <td>matiere2</td>
+            <td>lien2</td>
+            <td>date2</td>
+          </tr>
+          <tr>
+            <td>nom3</td>
+            <td>matiere3</td>
+            <td>lien3</td>
+            <td>date3</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
 </div>
-
-<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
-
-<div class="container p-shadow-20"style="border: 2px  solid black;box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);z-index: 2;">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">Information Professionnel</li>
-    </ol>
-  </nav>
-  <h1 style="color: #470E87;  font: normal 36px 'Cookie', cursive;text-align: center;"><span style="border-bottom: 3px solid black">Information Personnel</span></h1>
-  <div class="row" >
-    <div class="col-sm-2">
-      <img src="../assets/images/person-logo.jpg" style="border-radius: 25px" width="90px" height="90px">
-    </div>
-    <div class="col-sm-5"></div>
-    <div class="col-sm-5"></div>
   </div>
-  <br>
-  <div class="row" >
-    <div class="col-6">
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Preom :</strong> hamza</h4>
-      <h4><strong>Age :</strong> 21 ans</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Age :</strong> 21 ans</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-    </div>
-    <div class="col-6">
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Preom :</strong> hamza</h4>
-      <h4><strong>Age :</strong> 21 ans</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Age :</strong> 21 ans</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-      <h4><strong>Nom :</strong> shadeau</h4>
-    </div>
-  </div>
-</div>
-<br>
-<div class="container"style="border: 2px  solid black;box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);z-index: 2;">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Cours & Exercices</li>
-    </ol>
-  </nav>
-  <h1 style="color: #470E87;  font: normal 36px 'Cookie', cursive;text-align: center;"><span style="border-bottom: 3px solid black">Cours et exercices</span></h1>
-  <div class="row" >
-    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Math</div>
-    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Francais</div>
-    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="margin: 5px">anglais</div>
-    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Arabe</div>
-    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Islamique</div>
-    <div class="col-md-3 shadow p-3 mb-5 bg-white rounded" style="margin: 5px">Histoire Geo</div>
-  </div>
-  <br>
-  <div class="row" >
-    <div class="col-md-6 col-12">
-      <h2 style="text-align: center">Cours</h2>
-      <table class="table table-hover table-striped">
-        <thead>
-        <tr>
-          <th>nom</th>
-          <th>matiere</th>
-          <th>lien</th>
-          <th>date</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>nom1</td>
-          <td>matiere1</td>
-          <td>lien1</td>
-          <td>date1</td>
-        </tr>
-        <tr>
-          <td>nom2</td>
-          <td>matiere2</td>
-          <td>lien2</td>
-          <td>date2</td>
-        </tr>
-        <tr>
-          <td>nom3</td>
-          <td>matiere3</td>
-          <td>lien3</td>
-          <td>date3</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-md-6 col-12">
-      <h2 style="text-align: center">Exercice</h2>
-      <table class="table table-hover table-striped">
-        <thead>
-        <tr>
-          <th>nom</th>
-          <th>matiere</th>
-          <th>lien</th>
-          <th>date</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>nom1</td>
-          <td>matiere1</td>
-          <td>lien1</td>
-          <td>date1</td>
-        </tr>
-        <tr>
-          <td>nom2</td>
-          <td>matiere2</td>
-          <td>lien2</td>
-          <td>date2</td>
-        </tr>
-        <tr>
-          <td>nom3</td>
-          <td>matiere3</td>
-          <td>lien3</td>
-          <td>date3</td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
 </body>
 </html>
