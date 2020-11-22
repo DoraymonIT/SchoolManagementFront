@@ -1,0 +1,49 @@
+
+@media screen and (max-width: 800px) {
+  #bg{
+    /* The image used */
+    background-image: url("src/assets/images/login-back-etudiant.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .row{
+    height: 50%;
+  }
+  #border-titre{
+    width: 400px;
+    height: 80px;
+    position: absolute;
+    left:60px ;
+  }
+}
+@media screen and (min-width: 800px) {
+  #border-titre{
+    width: 400px;
+    height: 80px;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+  }
+  #bg{
+    /* The image used */
+    background-image: url("src/assets/images/login-back-etudiant.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .row{
+    height: 100%;
+    margin: 0px;
+  }
+}

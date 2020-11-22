@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>acceuil</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 2;">
+  <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" width="50px" height="50px"></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="openNav()"
+  >
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">acceuil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          etudiant
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          professeur
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">contact</a>
+      </li>
+    </ul>
+    <button class="btn bg-transaprent border-0 search-btn" (click)="display()"><span class="fa fa-search text-indigo"></span></button>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <a class="sidenavA" href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a class="sidenavA" href="#">acceuil</a>
+    <a class="sidenavA" href="#">etudiant</a>
+    <a class="sidenavA" href="#">profeseur</a>
+    <a class="sidenavA" href="#">contact </a>
+  </div>
+</nav>
+<div class="bg" style="position: relative;">
+  <div id="search-space" style="background-color: #6C0CAC;opacity: 0.7;height: 1000px; z-index: 2;position: absolute;width: 100%;">
+    <div class="form-group search-class w-100 mt-2" id="search">
+      <div class="input-group shadow-sm">
+        <div class="input-group-prepend">
+          <button class="btn bg-indigo text-white"><span class="fa fa-search"></span></button>
+        </div>
+        <input type="text" placeholder="search" class="form-control">
+        <div class="input-group-append">
+          <button class="btn bg-indigo text-white search-btn" (click)="masquer()"><span class="fa fa-times"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<hr>
+<h1 style="width: 100%;text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;margin: 10px 0 20px;"> <span style=" background:#fff; padding:0 10px;"> école en <strong> chiffre</strong></span></h1>
+<hr>
+<div class="col-md-12">
+  <br />
+  <div class="row" style="text-align: center">
+    <div class="col-md-4">
+      <img
+        src="../assets/images/etudiant%20icone.png"
+        width="20%"
+        alt="employes number"
+      />
+      <br />
+      <h5>50</h5>
+      <h5><strong>etudiant</strong></h5>
+    </div>
+    <div class="col-md-4">
+      <img
+        src="../assets/images/professeur%20icone.png"
+        width="20%"
+        alt="exchange number"
+      />
+      <br />
+      <h5>10</h5>
+      <h5><strong>professeur</strong></h5>
+    </div>
+    <div class="col-md-4">
+      <img
+        src="../assets/images/activité%20icone.png"
+        width="20%"
+        alt="project number"
+      />
+      <br />
+      <h5>40</h5>
+      <h5><strong>activité</strong></h5>
+    </div>
+  </div>
+</div>
+<hr>
+<h1 style="width: 100%;text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;margin: 10px 0 20px;"> <span style=" background:#fff; padding:0 10px;"> A propos de <strong>école</strong></span></h1>
+<hr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-12" class="imageRelative">
+      <img src="../assets/images/logo.png"  class="imageAbsolue" width="500px" height="500px">
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <br>
+      <br>
+      <h3 style="text-align: center;">school <strong>H.A.H</strong></h3>
+      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima assumenda dolorem suscipit a libero quo. Nemo, alias iste sint, ab cumque mollitia a labore ratione, est nam accusamus numquam! Eveniet!</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis velit animi minima nobis sequi. Praesentium quas molestiae impedit. Tenetur sed veniam optio laborum suscipit voluptatem perspiciatis, quod officia corrupti iure?</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos esse tenetur cumque, minima deleniti sunt! Minima nobis molestias quam a in quos, sit earum quidem, molestiae quisquam voluptates id amet.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos esse tenetur cumque, minima deleniti sunt! Minima nobis molestias quam a in quos, sit earum quidem, molestiae quisquam voluptates id amet.</p>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos esse tenetur cumque, minima deleniti sunt! Minima nobis molestias quam a in quos, sit earum quidem, molestiae quisquam voluptates id amet.</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<hr>
+<h1 style="width: 100%;text-align: center; border-bottom: 1px solid #000; line-height: 0.1em;margin: 10px 0 20px;"> <span style=" background:#fff; padding:0 10px;">les <strong>membres</strong></span></h1>
+<hr>
+<p-carousel [value]="responsiveOptions" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+  <ng-template let-car pTemplate="item">
+    <div class="card">
+      <img src="../assets/images/person-logo.jpg " alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>Jane Doe</b></h4>
+        <p>Interior Designer</p>
+      </div>
+    </div>  </ng-template>
+</p-carousel>
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+    <img src="../assets/images/logo.png" style="border-radius: 50%;">
+    <h3>school<span>H.A.H</span></h3>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      |
+      <a href="#">Blog</a>
+      |
+      <a href="#">About</a>
+      |
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">© 2019 Eduonix Learning Solutions Pvt. Ltd.</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>309 - Rupa Solitaire,
+           Bldg. No. A - 1, Sector - 1</span>
+        Mahape, Navi Mumbai - 400710</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 22-27782183</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@eduonix.com">support@eduonix.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>  About the company</span>
+      We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

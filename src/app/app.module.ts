@@ -54,6 +54,10 @@ import { StudentsComponent } from "./admin-side/students/students.component";
 import { TeachersComponent } from "./admin-side/teachers/teachers.component";
 import { CreateTeacherComponent } from "./admin-side/create-teacher/create-teacher.component";
 import { CreateStudentComponent } from "./admin-side/create-student/create-student.component";
+import { PagePrincipaleComponent } from './page-principale/page-principale.component';
+import {CarouselModule} from 'primeng/carousel';
+import { EtudiantLoginComponent } from './etudiant-login/etudiant-login.component';
+import { EtudiantCompteComponent } from './etudiant-compte/etudiant-compte.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +69,9 @@ import { CreateStudentComponent } from "./admin-side/create-student/create-stude
     TeachersComponent,
     CreateTeacherComponent,
     CreateStudentComponent,
+    PagePrincipaleComponent,
+    EtudiantLoginComponent,
+    EtudiantCompteComponent,
   ],
   imports: [
     FormsModule,
@@ -73,6 +80,7 @@ import { CreateStudentComponent } from "./admin-side/create-student/create-stude
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    CarouselModule,
     MatSidenavModule,
     MatSelectModule,
     MatSelectFilterModule,

@@ -13,5 +13,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### NgPrime 
 ### Angular Material
 ### Custom DORAYMONIT CSS3 
+### npm install primeng --save
+### npm install primeicons --save
+
 
 

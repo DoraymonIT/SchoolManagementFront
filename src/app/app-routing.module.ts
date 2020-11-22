@@ -7,11 +7,14 @@ import { OverviewComponent } from "./admin-side/overview/overview.component";
 import { TeachersComponent } from "./admin-side/teachers/teachers.component";
 import { CreateTeacherComponent } from "./admin-side/create-teacher/create-teacher.component";
 import { CreateStudentComponent } from "./admin-side/create-student/create-student.component";
+import {PagePrincipaleComponent} from "./page-principale/page-principale.component";
+import {EtudiantLoginComponent} from "./etudiant-login/etudiant-login.component";
+import {EtudiantCompteComponent} from "./etudiant-compte/etudiant-compte.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: LoginSideComponent,
+    component: PagePrincipaleComponent,
   },
   {
     path: "admin",
@@ -48,6 +51,18 @@ const routes: Routes = [
         outlet: "un",
       },
     ],
+  },
+  {
+    path: "login",
+    component: LoginSideComponent,
+  },
+  {
+    path: "login-etudiant",
+    component: EtudiantLoginComponent,
+  },
+  {
+    path: "compte-etudiant",
+    component: EtudiantCompteComponent,
   },
   {
     path: "logout",
