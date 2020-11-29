@@ -1,49 +1,29 @@
-
-@media screen and (max-width: 800px) {
-  #bg{
-    /* The image used */
-    background-image: url("src/assets/images/login-back-etudiant.jpg");
-
-    /* Full height */
-    height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .row{
-    height: 50%;
-  }
-  #border-titre{
-    width: 400px;
-    height: 80px;
-    position: absolute;
-    left:60px ;
-  }
+.bg{
+  background-image: url(../../assets/images/login-back-etudiant.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-@media screen and (min-width: 800px) {
-  #border-titre{
-    width: 400px;
-    height: 80px;
-    position: absolute;
-    left: 300px;
-    top: 100px;
-  }
-  #bg{
-    /* The image used */
-    background-image: url("src/assets/images/login-back-etudiant.jpg");
 
-    /* Full height */
-    height: 100%;
+.foot{
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding: 25px;
+}
+.backgr{
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .row{
-    height: 100%;
-    margin: 0px;
+}
+#definition {
+  position: absolute;
+  /* left: 50px; */
+top: 100px;
+  padding: 10px;
+  text-align: center;
+
+}
+@media (max-width: 768px) {
+  .bg {
+    display: none;
   }
 }
